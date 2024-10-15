@@ -129,14 +129,101 @@
           <legend>Published status</legend>
 
           <input id="draft" class="peer/draft" type="radio" name="status" />
-          <label for="draft" class="peer-checked/draft:text-sky-500">Draft</label>
+          <label for="draft" class="peer-checked/draft:text-sky-500"
+            >Draft</label
+          >
 
-          <input id="published" class="peer/published" type="radio" name="status" />
-          <label for="published" class="peer-checked/published:text-sky-500">Published</label>
+          <input
+            id="published"
+            class="peer/published"
+            type="radio"
+            name="status"
+          />
+          <label for="published" class="peer-checked/published:text-sky-500"
+            >Published</label
+          >
 
           <div class="hidden peer-checked/draft:block">Drafts are only....</div>
-          <div class="hidden peer-checked/published:block">Your post will be publicly....</div>
+          <div class="hidden peer-checked/published:block">
+            Your post will be publicly....
+          </div>
         </fieldset>
+      </div>
+
+      <!-- PSEUDO-ELEMENTS -->
+      <!-- Before and After -->
+      <div class="p-4 bg-white rounded-md">
+        <label class="block">
+          <span
+            class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700"
+          >
+            Email
+          </span>
+          <input
+            type="email"
+            name="email"
+            class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
+            placeholder="you@example.com"
+          />
+        </label>
+      </div>
+
+      <!-- Placeholder text -->
+      <div class="p-4 bg-white rounded-md">
+        <label class="relative block">
+          <span class="sr-only">Search</span>
+          <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+            <svg class="h-5 w-5 fill-slate-300" viewBox="0 0 20 20">
+              <!--  -->
+            </svg>
+          </span>
+          <input
+            class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
+            placeholder="Search for anything..."
+            type="text"
+            name="search"
+          />
+        </label>
+      </div>
+
+      <!-- File input buttons -->
+      <div class="p-4 bg-white rounded-md">
+        <form class="flex items-center space-x-6">
+          <div class="shrink-0">
+            <img
+              class="h-16 w-16 object-cover rounded-full"
+              src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1361&q=80"
+              alt="Current profile photo"
+            />
+          </div>
+          <label class="block">
+            <span class="sr-only">Choose profile photo</span>
+            <input
+              type="file"
+              class="block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-violet-100 file:text-violet-700 hover:file:bg-violet-100"
+            />
+          </label>
+        </form>
+      </div>
+
+      <!-- List markers -->
+      <div class="p-4 bg-white rounded-md">
+        <ul class="marker:text-sky-400 list-disc pl-5 space-y-3 text-slate-400">
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+        </ul>
+      </div>
+
+      <!-- Highlighted text -->
+      <div class="p-4 bg-white rounded-md">
+        <div class="selection:bg-fuchsia-300 selection:text-fuchsia-900">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque,
+            laudantium omnis nisi itaque perferendis
+            <em>voluptatibus odit maiores</em> minus aliquid voluptas!
+          </p>
+        </div>
       </div>
     </main>
   </body>
